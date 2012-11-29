@@ -1,0 +1,20 @@
+{
+  "name": "Transmitter",
+  "description": "Socket.io App Transmitting Alerts to Polyjuice",
+  "version": "0.0.1",
+  "dependencies": {
+    "socket.io": "0.9.11"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "0.8.x",
+	"npm": "1.1.x"
+  },
+  "author": "",
+  "repository": {
+    "url": ""
+  }
+}

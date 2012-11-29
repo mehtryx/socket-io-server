@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			var socket = io.connect('http://localhost:4455');
+			//socket.emit('my other event', { msg: 'NHL season to start 2013', style: 'alert', delay: '' });
+			function sendMessage(transmit) {
+				socket.emit('my other event', { msg: transmit["message"].value, style: transmit["style"].value, delay: transmit["delay"].value });
+			}
+		</script>
+	</head>
+	<body>
+		<form id="transmitter" onsubmit="sendMessage(this)">
+			<table>
+				<tr>
+					<td>Message:</td>
+					<td><input type="text" id="message" name="message" value="Enter message here..." /></td>
+				</tr>
+				<tr>
+					<td>Style:</td>
+					<td><select id="style" name="style">
+							<option value="alert">secondary</option>
+							<option value="alert">alert</option>
+							<option value="alert">success</option>
+					</td>
+				</tr>
+				<tr>
+					<td>Delay:</td>
+					<td><input type="text" id="delay" name="delay" value="5" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" id="sendMsg" name="sendMsg" value="Send Message" /></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
