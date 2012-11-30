@@ -26,6 +26,7 @@ io.configure(function () {
 io.sockets.on('connection', function (socket) {
 	socket.on('my other event', function (data) {
 		console.log(data);
-	socket.broadcast.emit('message', { msg: data.msg, style: data.style, delay: data.delay });
+		io.sockets.emit('message', { msg: data.msg, style: data.style, delay: data.delay })
+		//socket.broadcast.emit('message', { msg: data.msg, style: data.style, delay: data.delay });
 	});
 });
