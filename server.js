@@ -21,8 +21,6 @@ function handler (req, res) {
 io.configure(function () { 
 	io.set("transports", ["xhr-polling"]); 
 	io.set("polling duration", 10); 
-	io.set('heartbeat interval', 20);
-	io.set('heartbeat timeout', 60);
 });
 
 io.sockets.on('connection', function (socket) {
