@@ -1,7 +1,7 @@
 {
   "name": "Transmitter",
   "description": "Socket.io App Transmitting Alerts to Polyjuice",
-  "version": "0.0.1",
+  "version": "0.0.1-2",
   "dependencies": {
     "socket.io": "0.9.11"
   },

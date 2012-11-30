@@ -2,3 +2,4 @@
 ==========================
 
   * Initial app
+  * Tested and deployed to nodejitsu http://mehtryx.transmitter.jit.su
