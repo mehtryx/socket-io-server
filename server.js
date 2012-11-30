@@ -17,6 +17,12 @@ function handler (req, res) {
   });
 }
 
+// assuming io is the Socket.IO server object
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
 io.sockets.on('connection', function (socket) {
   socket.on('my other event', function (data) {
     console.log(data);
