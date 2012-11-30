@@ -5,7 +5,7 @@
 			var socket = io.connect('http://dry-chamber-4375.herokuapp.com');
 			//socket.emit('my other event', { msg: 'NHL season to start 2013', style: 'alert', delay: '' });
 			function sendMessage(transmit) {
-				socket.emit('my other event', { msg: transmit["message"].value, style: transmit["style"].value, delay: transmit["delay"].value });
+				socket.emit('reciever', { msg: transmit["message"].value, style: transmit["style"].value, delay: transmit["delay"].value });
 			}
 		</script>
 	</head>
