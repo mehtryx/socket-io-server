@@ -2,7 +2,7 @@
 	<head>
 		<script src="/socket.io/socket.io.js"></script>
 		<script>
-			var socket = io.connect('http://mehtryx.transmitter.jit.su');
+			var socket = io.connect('http://postmedia.transmitter.jit.su');
 			//socket.emit('my other event', { msg: 'NHL season to start 2013', style: 'alert', delay: '' });
 			function sendMessage(transmit) {
 				socket.emit('reciever', { msg: transmit["message"].value, style: transmit["style"].value, delay: transmit["delay"].value });
@@ -14,14 +14,15 @@
 			<table>
 				<tr>
 					<td>Message:</td>
-					<td><input type="text" id="message" name="message" value="Enter message here..." /></td>
+					<td><input type="text" id="message" name="message" placeholder="Enter message here..." /></td>
 				</tr>
 				<tr>
 					<td>Style:</td>
 					<td><select id="style" name="style">
-							<option value="alert">secondary</option>
+							<option value="default">default</option>
+							<option value="secondary">secondary</option>
 							<option value="alert">alert</option>
-							<option value="alert">success</option>
+							<option value="success">success</option>
 					</td>
 				</tr>
 				<tr>

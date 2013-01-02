@@ -1,7 +1,7 @@
 {
   "name": "Transmitter",
   "description": "Socket.io App Transmitting Alerts to Polyjuice",
-  "version": "0.0.1-2",
+  "version": "0.0.1-5",
   "dependencies": {
     "socket.io": "0.9.11"
   },
@@ -17,5 +17,5 @@
   "repository": {
     "url": ""
   },
-  "subdomain": "mehtryx.transmitter"
+  "subdomain": "postmedia.transmitter"
 }
